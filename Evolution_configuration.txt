@@ -1,0 +1,13 @@
+Seed: 101
+Population: 3
+Generations: 3
+Mutation rate: 1.0
+Crossover rate: 0.0
+Number of evaluations: 1
+Number of turns: 3000
+Checkpoint: 10
+Opponent: Custom_LightRush
+Scenario: 3v3_lights
+Scenario path: C:\Users\lbkelly0\ECU_work\DSTG\2019 RTS\Code base\MicroRTS_AI_System\.\scenarios\3v3_lights
+Selection scheme: SUS
+Visibility: Full

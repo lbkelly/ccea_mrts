@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libs1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jbt-master/JBTEditor/jbt.tools.bteditor/libs/mmpm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jbt-master/JBTEditor/jbt.tools.bteditor/libs/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jbt-master/JBTEditor/jbt.tools.bteditor/libs/jdomsrc.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

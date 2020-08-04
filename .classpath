@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="jbt-master/JBTCore/src"/>
+	<classpathentry kind="src" path="microrts-master/src"/>
+	<classpathentry kind="src" path="ecj/src/main/java"/>
+	<classpathentry kind="lib" path="Apache/commons/commons-compress-1.18.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/commons-collections4-4.2.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/jaxb-api-2.3.0.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/jaxb-core-2.3.0.1.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/jaxb-impl-2.3.0.1.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="Apache/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="Apache/ooxml-lib/curvesapi-1.05.jar"/>
+	<classpathentry kind="lib" path="Apache/ooxml-lib/xmlbeans-3.0.1.jar"/>
+	<classpathentry kind="lib" path="Apache/poi-4.0.0.jar"/>
+	<classpathentry kind="lib" path="Apache/poi-examples-4.0.0.jar"/>
+	<classpathentry kind="lib" path="Apache/poi-excelant-4.0.0.jar"/>
+	<classpathentry kind="lib" path="Apache/poi-ooxml-4.0.0.jar"/>
+	<classpathentry kind="lib" path="Apache/poi-ooxml-schemas-4.0.0.jar"/>
+	<classpathentry kind="lib" path="Apache/poi-scratchpad-4.0.0.jar"/>
+	<classpathentry kind="lib" path="ecj/lib/pshecj.jar"/>
+	<classpathentry kind="lib" path="External Required Libraries/EJML-core-0.27.jar"/>
+	<classpathentry kind="lib" path="External Required Libraries/EJML-dense64-0.27.jar"/>
+	<classpathentry kind="lib" path="External Required Libraries/EJML-simple-0.27.jar"/>
+	<classpathentry kind="lib" path="External Required Libraries/itext-1.2.jar"/>
+	<classpathentry kind="lib" path="External Required Libraries/jcommon-1.0.16.jar"/>
+	<classpathentry kind="lib" path="External Required Libraries/jfreechart-1.0.13.jar"/>
+	<classpathentry kind="lib" path="External Required Libraries/jzlib-1.0.7.jar"/>
+	<classpathentry kind="lib" path="External Required Libraries/pshecj.jar"/>
+	<classpathentry kind="lib" path="jbt-master/JBTCore/libs/jargs.jar"/>
+	<classpathentry kind="lib" path="jbt-master/JBTCore/libs/jdom.jar"/>
+	<classpathentry kind="lib" path="jbt-master/JBTCore/libs/mmpm.jar"/>
+	<classpathentry kind="lib" path="jbt-master/JBTCore/libs/sourceformatter.jar"/>
+	<classpathentry kind="lib" path="microrts-master/lib/minimal-json-0.9.4.jar"/>
+	<classpathentry kind="lib" path="microrts-master/lib/weka.jar"/>
+	<classpathentry kind="lib" path="microrts-master/lib/jdom.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,9 @@
+Best Individual of Run:
+Subpopulation 0:
+Evaluated: true
+Fitness: 41.0
+Tree 0:
+ (Sequence AttackClosestBase (Selector AttackClosestBase
+     (Selector Idle) (Selector CheckForBases))
+     (Sequence (Selector AttackClosestEnemy) (Sequence
+         AttackClosestEnemy Idle CheckForBases CheckForEnemies)))

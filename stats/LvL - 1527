@@ -1,0 +1,8 @@
+Best Individual of Run:
+Subpopulation 0:
+Evaluated: true
+Fitness: 44.0
+Tree 0:
+ (Sequence CheckForAllies AttackClosestBase
+     AttackClosestEnemy (Sequence Idle AttackClosestEnemy
+     CheckForBases MoveToClosestAllies))

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pshecj">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ecj/lib/pshecj.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
