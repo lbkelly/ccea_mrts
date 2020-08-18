@@ -7,26 +7,20 @@
 package ec.app.BTEvolve;
 
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.math.BigDecimal;
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArraySet;
-
+import ec.Evolve;
+import ec.util.Output;
+import jbt.model.core.ModelTask;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import ec.Evolve;
-import ec.util.Output;
-import jbt.model.core.ModelTask;
 import tests.ECJ_Tournament;
+
+import java.io.*;
+import java.math.BigDecimal;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 
 public class MyThread extends Thread 
@@ -163,12 +157,8 @@ public class MyThread extends Thread
 				}
 			}
 			br.close();
-			
-//			tree = " (Sequence CheckIfLight AttackClosestBase AttackClosestEnemy)";	
-//			tree = " (Sequence CheckIfLight AttackClosestBase AttackClosestEnemy)";	
-			tree = " (Selector AttackClosestBase AttackClosestEnemy)";	
 
-//			tree = " (Selector (Sequence CheckIfRanged AttackClosestEnemy AttackClosestBase) (Sequence CheckIfLight CheckForAllies AttackClosestBase))";	
+			tree = " (Sequence AttackClosestBase)";
 
 			this.tree = tree;
 		}

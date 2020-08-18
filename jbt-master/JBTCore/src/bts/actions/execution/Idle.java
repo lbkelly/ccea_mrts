@@ -14,13 +14,12 @@
  */
 
 package bts.actions.execution;
-import java.util.HashMap;
-
-import ai.abstraction.*;
-import ai.abstraction.pathfinding.BFSPathFinding;
-import jbt.model.core.ModelTask;
+import ai.abstraction.AbstractAction;
+import ai.abstraction.BTController;
 import rts.units.Unit;
 import rts.units.UnitTypeTable;
+
+import java.util.HashMap;
 
 /** ExecutionAction class created from MMPM action Idle. */
 public class Idle extends jbt.execution.task.leaf.action.ExecutionAction {
@@ -161,7 +160,7 @@ public class Idle extends jbt.execution.task.leaf.action.ExecutionAction {
 		this.getContext().setVariable("actions", Actions); // Set actions context variable
 
 
-//		System.out.println(this.getClass().getCanonicalName() + " spawned");
+		System.out.println(this.getClass().getCanonicalName() + " spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
@@ -170,7 +169,7 @@ public class Idle extends jbt.execution.task.leaf.action.ExecutionAction {
 		 * should only return Status.SUCCESS, Status.FAILURE or Status.RUNNING.
 		 * No other values are allowed.
 		 */
-//		return jbt.execution.core.ExecutionTask.Status.SUCCESS;
+		System.out.println(this.getClass().getCanonicalName() + " running");
 		return jbt.execution.core.ExecutionTask.Status.RUNNING;
 
 	}

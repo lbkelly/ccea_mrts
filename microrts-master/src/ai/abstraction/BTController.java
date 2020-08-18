@@ -13,30 +13,28 @@ package ai.abstraction;
 
 // imports
 import ai.abstraction.pathfinding.AStarPathFinding;
-import ai.core.AI;
 import ai.abstraction.pathfinding.PathFinding;
+import ai.core.AI;
 import ai.core.ParameterSpecification;
+import bts.btlibrary.TTLibrary;
+import jbt.execution.core.*;
+import jbt.model.core.ModelTask;
+import rts.GameState;
+import rts.PhysicalGameState;
+import rts.PlayerAction;
+import rts.units.Unit;
+import rts.units.UnitType;
+import rts.units.UnitTypeTable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
-
-
-import rts.GameState;
-import rts.PhysicalGameState;
-import rts.Player;
-import rts.PlayerAction;
-import rts.units.*;
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // BT IMPORTS
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 // import IBTLibrary & protoBT
-import jbt.execution.core.*;
-import bts.btlibrary.*;
-import jbt.model.core.*;
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // class definition
@@ -209,13 +207,14 @@ public class BTController extends AbstractionLayerAI {
             	// Get the actions hash
             	@SuppressWarnings("unchecked")
     			HashMap<Unit, AbstractAction> Actions = (HashMap<Unit, AbstractAction>) context.getVariable("actions");   
-            	System.out.println(Actions.toString());
+            	System.out.println("Current unit and action" + Actions.toString());
+
             	 
             	// Add the current units actions into the overall actions hash
             	actions.putAll(Actions);
         	}
         }
-        System.out.println(gs.getTime() + " --------------------------------------------------------------");
+        System.out.println("Game time: " + gs.getTime() + "/120");
         return translateActions(player, gs);
     }
 

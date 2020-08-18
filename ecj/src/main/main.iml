@@ -13,15 +13,7 @@
     <orderEntry type="library" name="Apache" level="project" />
     <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="library" name="lib1" level="project" />
-    <orderEntry type="library" name="Apache" level="project" />
-    <orderEntry type="library" name="External Required Libraries" level="project" />
-    <orderEntry type="library" name="libs1" level="project" />
-    <orderEntry type="library" name="lib1" level="project" />
-    <orderEntry type="library" name="pshecj" level="project" />
-    <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="module" module-name="microrts-master" />
     <orderEntry type="module" module-name="JBTCore" />
-    <orderEntry type="module" module-name="JBTCore" />
-    <orderEntry type="module" module-name="microrts-master" />
   </component>
 </module>

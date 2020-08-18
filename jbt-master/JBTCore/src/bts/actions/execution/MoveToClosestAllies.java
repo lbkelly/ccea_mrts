@@ -14,17 +14,13 @@
  */
 
 package bts.actions.execution;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Random;
-
-import ai.abstraction.*;
-import ai.abstraction.pathfinding.BFSPathFinding;
-import jbt.model.core.ModelTask;
-import rts.GameState;
+import ai.abstraction.AbstractAction;
+import ai.abstraction.BTController;
 import rts.units.Unit;
 import rts.units.UnitTypeTable;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /** ExecutionAction class created from MMPM action MoveToClosestAllies. */
 public class MoveToClosestAllies extends
@@ -280,25 +276,17 @@ public class MoveToClosestAllies extends
 		this.getContext().setVariable("actions", Actions); // Set actions context variable
 		
 		
-//		System.out.println("$$$$$$$$$$$$$$$  LEAVING INTERNAL SPAWN FOR " + f.getID() + "  $$$$$$$$$$$$$$$");
 
-//		System.out.println(this.getClass().getCanonicalName() + " spawned");
+		System.out.println(this.getClass().getCanonicalName() + " spawned");
 	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
-//		@SuppressWarnings("unchecked")
-//		ArrayList<Unit> friendly = (ArrayList<Unit>) this.getContext().getVariable("friendly");
-		// Are we moving
-//		Unit f = (Unit) this.getContext().getVariable("unitVar");
-//		System.out.println("&&&&&&&&&&&&&&&&&&&  IN INTERNAL TICK FOR " + f.getID()  + "  &&&&&&&&&&&&&&&&&&&");
 		if(isMoving)
 		{
-//			System.out.println("Moving to ally, returning success");
-//			System.out.println("&&&&&&&&&&&&&&&&&&&  LEAVING INTERNAL TICK FOR " + f.getID()  + "  &&&&&&&&&&&&&&&&&&&");
-			return jbt.execution.core.ExecutionTask.Status.SUCCESS;
+			System.out.println(this.getClass().getCanonicalName() + " running");
+			return jbt.execution.core.ExecutionTask.Status.RUNNING;
 		}
-//		System.out.println("Not moving to ally, returning failure");
-//		System.out.println("&&&&&&&&&&&&&&&&&&&  LEAVING INTERNAL TICK FOR " + f.getID()  + "  &&&&&&&&&&&&&&&&&&&");
+		System.out.println(this.getClass().getCanonicalName() + " failing");
 		return jbt.execution.core.ExecutionTask.Status.FAILURE;
 	}
 

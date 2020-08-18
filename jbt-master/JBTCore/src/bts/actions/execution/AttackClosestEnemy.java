@@ -14,13 +14,12 @@
  */
 
 package bts.actions.execution;
-import rts.units.*;
-import rts.GameState;
-import rts.UnitActionAssignment;
-import ai.abstraction.pathfinding.BFSPathFinding;
-import jbt.model.core.ModelTask;
 import ai.abstraction.AbstractAction;
 import ai.abstraction.BTController;
+import jbt.model.core.ModelTask;
+import rts.units.Unit;
+import rts.units.UnitTypeTable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -184,8 +183,7 @@ public class AttackClosestEnemy extends
 		HashMap<Unit, AbstractAction> Actions = Controller.getActionsHash(); // Set Actions to local actions hash
 		this.getContext().setVariable("actions", Actions); // Set actions context variable
 
-		System.out.println(this.getClass().toString());
-	}
+		System.out.println(this.getClass().getCanonicalName() + " spawned");	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		/*
@@ -203,10 +201,11 @@ public class AttackClosestEnemy extends
 		if(enemy.isEmpty() == false)
 		{
 			// Return success
-//			return jbt.execution.core.ExecutionTask.Status.SUCCESS;
+			System.out.println(this.getClass().getCanonicalName() + " running");
 			return jbt.execution.core.ExecutionTask.Status.RUNNING;
 		}
 		// If there are either no enemies or friendlies
+		System.out.println(this.getClass().getCanonicalName() + " failing");
 		return jbt.execution.core.ExecutionTask.Status.FAILURE;
 		
 	}

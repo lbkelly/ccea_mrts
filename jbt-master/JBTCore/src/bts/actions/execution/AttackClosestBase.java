@@ -14,14 +14,12 @@
  */
 
 package bts.actions.execution;
-import rts.units.*;
-import rts.PhysicalGameState;
-import rts.GameState;
-import rts.UnitActionAssignment;
-import ai.abstraction.pathfinding.BFSPathFinding;
-import jbt.model.core.ModelTask;
 import ai.abstraction.AbstractAction;
 import ai.abstraction.BTController;
+import jbt.model.core.ModelTask;
+import rts.GameState;
+import rts.units.Unit;
+import rts.units.UnitTypeTable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -185,9 +183,8 @@ public class AttackClosestBase extends
 		
 		HashMap<Unit, AbstractAction> Actions = Controller.getActionsHash(); // Set Actions to local actions hash
 		this.getContext().setVariable("actions", Actions); // Set actions context variable
-		
-		System.out.println(this.getClass().toString());
-	}
+
+		System.out.println(this.getClass().getCanonicalName() + " spawned");	}
 
 	protected jbt.execution.core.ExecutionTask.Status internalTick() {
 		/*
@@ -196,7 +193,7 @@ public class AttackClosestBase extends
 		 * No other values are allowed.
 		 */
 //		System.out.println("Inside Attack closest base");
-		GameState GS = (GameState) this.getContext().getVariable("gsVar");
+		GameState gs = (GameState) this.getContext().getVariable("gsVar");
 		@SuppressWarnings("unchecked")
 		ArrayList<Unit> friendly = (ArrayList<Unit>) this.getContext().getVariable("friendly");
 		ArrayList<Unit> enemyBases = (ArrayList<Unit>) this.getContext().getVariable("enemyBases");
@@ -204,9 +201,10 @@ public class AttackClosestBase extends
 		if (enemyBases.isEmpty() == false)
 		{
 			// Maybe if one of the units could perform this action, return success.
-//			return jbt.execution.core.ExecutionTask.Status.SUCCESS;
+			System.out.println(this.getClass().getCanonicalName() + " running");
 			return jbt.execution.core.ExecutionTask.Status.RUNNING;
 		}
+		System.out.println(this.getClass().getCanonicalName() + " failing");
 		return jbt.execution.core.ExecutionTask.Status.FAILURE;
 	}
 

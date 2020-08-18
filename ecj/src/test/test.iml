@@ -9,9 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="ecj-26" level="project" />
     <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="ecj-26" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="module" module-name="main" />
     <orderEntry type="module" module-name="main" />
   </component>
 </module>

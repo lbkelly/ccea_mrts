@@ -5,64 +5,12 @@
 
 package ec.app.BTEvolve;
 
-import java.awt.EventQueue;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.nio.file.Files;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
 import java.util.Random;
 
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
-import java.awt.BorderLayout;
-import java.awt.Desktop;
-
-import javax.swing.JTextField;
-import javax.swing.ScrollPaneConstants;
-
-import ec.Evolve;
-import ec.app.BTEvolve.MyThread;
-import gui.frontend.FETracePaneModified;
-
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JComboBox;
-import javax.swing.JDialog;
-import javax.swing.JFileChooser;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JScrollPane;
-import javax.swing.JCheckBox;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.Dialog.ModalityType;
-
-import javax.swing.SwingConstants;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JTabbedPane;
-import javax.swing.border.EtchedBorder;
-import javax.swing.JTextPane;
-import javax.swing.LayoutStyle.ComponentPlacement;
-
-import java.util.Date;
 
 public class BT_App implements ActionListener, ThreadCompleteListener{
 
@@ -278,7 +226,7 @@ public class BT_App implements ActionListener, ThreadCompleteListener{
 		textFieldPopulation = new JTextField("");
 		textFieldPopulation.setBounds(130, 23, 96, 19);
 		textFieldPopulation.setColumns(10);
-		textFieldPopulation.setText("2");
+		textFieldPopulation.setText("1");
 		
 		textFieldGeneration = new JTextField("");
 		textFieldGeneration.setBounds(130, 46, 96, 19);
@@ -301,7 +249,7 @@ public class BT_App implements ActionListener, ThreadCompleteListener{
 		textFieldEvaluations.setText("1");
 		
 		textFieldTurns = new JTextField();
-		textFieldTurns.setText("100");
+		textFieldTurns.setText("120");
 		textFieldTurns.setBounds(130, 218, 53, 20);
 		textFieldTurns.setColumns(10);
 		

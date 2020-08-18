@@ -15,17 +15,17 @@
  */
 package jbt.execution.core;
 
-import java.util.Hashtable;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
 import jbt.execution.context.BasicContext;
 import jbt.execution.core.ExecutionTask.Status;
 import jbt.execution.task.decorator.ExecutionInterrupter;
 import jbt.model.core.ModelTask;
 import jbt.model.core.ModelTask.Position;
 import jbt.model.task.decorator.ModelInterrupter;
+
+import java.util.Hashtable;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * BTExecutor is the implementation of the IBTExecutor interface.
@@ -201,30 +201,30 @@ public class BTExecutor implements IBTExecutor {
 		if (currentStatus == Status.RUNNING || currentStatus == Status.UNINITIALIZED) {
 			processInsertionsAndRemovals();
 
-//			if (this.firstTimeTicked) {
-//				this.executionBT = this.modelBT.createExecutor(this, null);
-//				this.executionBT.spawn(this.context);
-//				this.firstTimeTicked = false;
-//			} else {
-//				for (ExecutionTask t : tickableTasks) {
-//					t.tick();
-//				}
-//			}
+			if (this.firstTimeTicked) {
+				this.executionBT = this.modelBT.createExecutor(this, null);
+				this.executionBT.spawn(this.context);
+				this.firstTimeTicked = false;
+			} else {
+				for (ExecutionTask t : tickableTasks) {
+					t.tick();
+				}
+			}
 
 			
 			
 			
-			this.executionBT = this.modelBT.createExecutor(this, null);
-			this.executionBT.spawn(this.context);
-			this.firstTimeTicked = false;
-		
-			for (ExecutionTask t : tickableTasks) {
-				t.tick();
-			}
+//			this.executionBT = this.modelBT.createExecutor(this, null);
+//			this.executionBT.spawn(this.context);
+//			this.firstTimeTicked = false;
+//
+//			for (ExecutionTask t : tickableTasks) {
+//				t.tick();
+//			}
+//
 			
 			
-			
-			processInsertionsAndRemovals();
+//			processInsertionsAndRemovals();
 		}
 	}
 
